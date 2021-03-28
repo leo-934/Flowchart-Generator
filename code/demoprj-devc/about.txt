@@ -1,0 +1,6 @@
+***********************************************
+This is a simple algorithm flowchart generator.
+
+Please go to read help.txt to learn how to use. 
+
+***********************************************

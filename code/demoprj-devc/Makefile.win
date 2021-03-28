@@ -1,0 +1,85 @@
+# Project: demo
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = ../demoprj-devc/exceptio.o ../demoprj-devc/genlib.o ../demoprj-devc/graphics.o ../demoprj-devc/random.o ../demoprj-devc/simpio.o ../demoprj-devc/strlib.o ../demoprj-devc/imgui.o ../demoprj-devc/display.o ../demoprj-devc/draw_button.o ../demoprj-devc/draw_figure_extension.o ../demoprj-devc/draw_log.o ../demoprj-devc/draw_menu.o ../demoprj-devc/enum.o ../demoprj-devc/link.o ../demoprj-devc/main.o ../demoprj-devc/mousecallback.o ../demoprj-devc/file_operate.o ../demoprj-devc/generate_id.o ../demoprj-devc/inputbox.o ../demoprj-devc/draw_terminal.o
+LINKOBJ  = ../demoprj-devc/exceptio.o ../demoprj-devc/genlib.o ../demoprj-devc/graphics.o ../demoprj-devc/random.o ../demoprj-devc/simpio.o ../demoprj-devc/strlib.o ../demoprj-devc/imgui.o ../demoprj-devc/display.o ../demoprj-devc/draw_button.o ../demoprj-devc/draw_figure_extension.o ../demoprj-devc/draw_log.o ../demoprj-devc/draw_menu.o ../demoprj-devc/enum.o ../demoprj-devc/link.o ../demoprj-devc/main.o ../demoprj-devc/mousecallback.o ../demoprj-devc/file_operate.o ../demoprj-devc/generate_id.o ../demoprj-devc/inputbox.o ../demoprj-devc/draw_terminal.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -mwindows
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"../libgraphics" -I"../simpleGUI"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"../libgraphics" -I"../simpleGUI"
+BIN      = demo.exe
+CXXFLAGS = $(CXXINCS) -std=c99
+CFLAGS   = $(INCS) -std=c99
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+../demoprj-devc/exceptio.o: ../libgraphics/exceptio.c
+	$(CC) -c ../libgraphics/exceptio.c -o ../demoprj-devc/exceptio.o $(CFLAGS)
+
+../demoprj-devc/genlib.o: ../libgraphics/genlib.c
+	$(CC) -c ../libgraphics/genlib.c -o ../demoprj-devc/genlib.o $(CFLAGS)
+
+../demoprj-devc/graphics.o: ../libgraphics/graphics.c
+	$(CC) -c ../libgraphics/graphics.c -o ../demoprj-devc/graphics.o $(CFLAGS)
+
+../demoprj-devc/random.o: ../libgraphics/random.c
+	$(CC) -c ../libgraphics/random.c -o ../demoprj-devc/random.o $(CFLAGS)
+
+../demoprj-devc/simpio.o: ../libgraphics/simpio.c
+	$(CC) -c ../libgraphics/simpio.c -o ../demoprj-devc/simpio.o $(CFLAGS)
+
+../demoprj-devc/strlib.o: ../libgraphics/strlib.c
+	$(CC) -c ../libgraphics/strlib.c -o ../demoprj-devc/strlib.o $(CFLAGS)
+
+../demoprj-devc/imgui.o: ../simpleGUI/imgui.c
+	$(CC) -c ../simpleGUI/imgui.c -o ../demoprj-devc/imgui.o $(CFLAGS)
+
+../demoprj-devc/display.o: ../project/display.c
+	$(CC) -c ../project/display.c -o ../demoprj-devc/display.o $(CFLAGS)
+
+../demoprj-devc/draw_button.o: ../project/draw_button.c
+	$(CC) -c ../project/draw_button.c -o ../demoprj-devc/draw_button.o $(CFLAGS)
+
+../demoprj-devc/draw_figure_extension.o: ../project/draw_figure_extension.c
+	$(CC) -c ../project/draw_figure_extension.c -o ../demoprj-devc/draw_figure_extension.o $(CFLAGS)
+
+../demoprj-devc/draw_log.o: ../project/draw_log.c
+	$(CC) -c ../project/draw_log.c -o ../demoprj-devc/draw_log.o $(CFLAGS)
+
+../demoprj-devc/draw_menu.o: ../project/draw_menu.c
+	$(CC) -c ../project/draw_menu.c -o ../demoprj-devc/draw_menu.o $(CFLAGS)
+
+../demoprj-devc/enum.o: ../project/enum.c
+	$(CC) -c ../project/enum.c -o ../demoprj-devc/enum.o $(CFLAGS)
+
+../demoprj-devc/link.o: ../project/link.c
+	$(CC) -c ../project/link.c -o ../demoprj-devc/link.o $(CFLAGS)
+
+../demoprj-devc/main.o: ../project/main.c
+	$(CC) -c ../project/main.c -o ../demoprj-devc/main.o $(CFLAGS)
+
+../demoprj-devc/mousecallback.o: ../project/mousecallback.c
+	$(CC) -c ../project/mousecallback.c -o ../demoprj-devc/mousecallback.o $(CFLAGS)
+
+../demoprj-devc/file_operate.o: ../project/file_operate.c
+	$(CC) -c ../project/file_operate.c -o ../demoprj-devc/file_operate.o $(CFLAGS)
+
+../demoprj-devc/generate_id.o: ../project/generate_id.c
+	$(CC) -c ../project/generate_id.c -o ../demoprj-devc/generate_id.o $(CFLAGS)
+
+../demoprj-devc/inputbox.o: ../project/inputbox.c
+	$(CC) -c ../project/inputbox.c -o ../demoprj-devc/inputbox.o $(CFLAGS)
+
+../demoprj-devc/draw_terminal.o: ../project/draw_terminal.c
+	$(CC) -c ../project/draw_terminal.c -o ../demoprj-devc/draw_terminal.o $(CFLAGS)
